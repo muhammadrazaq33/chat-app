@@ -1,0 +1,8 @@
+@import "tailwindcss";
+/* daisyui components */
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* body {
+  background-color: black;
+} */
