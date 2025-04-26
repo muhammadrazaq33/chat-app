@@ -12,7 +12,7 @@ export const protectRoute = async (req, res, next) => {
     }
     // if there is jwt token so we will parse token through cookie-parser package and decode the token
     const decode = jwt.verify(token, process.env.JWT_SECRET_KEY);
-    // console.log("checkin", decode);
+    console.log("checkin", decode);
     if (!decode) {
       return res.status(401).json({ message: "Unauthorized. Invalid Token" });
     }
