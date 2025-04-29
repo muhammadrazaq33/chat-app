@@ -11,7 +11,9 @@ const app = express();
 dotenv.config();
 
 // this middleware extract the data from the Body
-app.use(express.json());
+// app.use(express.json());
+// the profile image is too large so i increase the body size limit by "10mb" in express.json()
+app.use(express.json({ limit: "10mb" })); // or more if needed
 app.use(cookieParser());
 app.use(
   cors({
