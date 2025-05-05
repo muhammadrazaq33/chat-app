@@ -23,7 +23,7 @@ app.use(
 );
 
 app.use("/api/auth", authRoute);
-app.use("/api/message", messageRoute);
+app.use("/api/messages", messageRoute);
 
 const port = process.env.PORT || 5000;
 
