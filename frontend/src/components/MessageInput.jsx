@@ -21,6 +21,12 @@ function MessageInput() {
       setImagePreview(reader.result);
     };
     reader.readAsDataURL(file);
+    // 🔄 Execution Timeline
+    // Step 1: new FileReader() creates the reader.
+    // Step 2: You attach the function to run when reading ends.
+    // Step 3: readAsDataURL(file) starts the reading process asynchronously.
+    // After some time (when reading is done), the onloadend callback runs → it calls setImagePreview(reader.result).
+    // Your React state updates, and the new image preview is rendered
   };
 
   const removeImage = () => {
